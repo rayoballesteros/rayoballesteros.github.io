@@ -1,6 +1,10 @@
 name: Enviar URLs a Bing IndexNow
 
 on:
+  schedule:
+    - cron: '0 6 * * *'  # Todos los días a las 6:00 UTC
+  workflow_dispatch:     # Para poder ejecutarlo manualmente desde GitHub
+
   workflow_dispatch:
   schedule:
     - cron: '0 12 * * *'  # Ejecutar todos los días a las 12:00 UTC (opcional)
